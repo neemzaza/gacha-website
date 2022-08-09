@@ -1,9 +1,20 @@
+@font-face {
+  font-family: genshin-font;
+  src: url("./../access/font/zh-cn.ttf");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: genshin-font;
+  background: rgb(207, 237, 255);
+}
+
+.content {
+  padding: 2rem;
 }
 
 a {
@@ -18,4 +29,96 @@ a {
 ul {
   height: 10rem;
   overflow: scroll;
+}
+
+h4.win {
+  color: rgb(215, 178, 15);
+}
+
+h4.lost {
+  color: rgb(80, 71, 28);
+}
+
+h4.four {
+  color: rgb(196, 0, 196);
+}
+
+h4.fourgua {
+  color: purple;
+}
+
+p.common {
+  color: rgb(64, 166, 230);
+}
+
+button {
+  font-family: genshin-font;
+  border: none;
+  background: white;
+  color: rgb(104, 104, 90);
+  padding: 0.5rem;
+  margin-right: 4rem;
+  width: 12rem;
+  position: relative;
+  border: 1px solid rgb(225, 225, 39);
+  transition: .1s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active::before {
+  background: rgb(234, 234, 234);
+}
+
+button:active::after {
+  background: rgb(234, 234, 234);
+}
+
+button:active {
+  background: rgb(234, 234, 234);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 3rem;
+  height: 3rem;
+  left: -20px;
+  top: 3.5px;
+  border-radius: 50%;
+  transition: .1s;
+  border-left: 1px solid rgb(225, 225, 39);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 3rem;
+  height: 3rem;
+  right: -20px;
+  top: 3.5px;
+  border-radius: 50%;
+  transition: .1s;
+  border-right: 1px solid rgb(225, 225, 39);
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+span {
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.25rem;
+}
+
+.gem, .interwined {
+  position: relative;
+  top: 8px !important;
 }
